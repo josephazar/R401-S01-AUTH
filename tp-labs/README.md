@@ -294,9 +294,10 @@ curl -X GET http://localhost:3003/admin/dashboard \
 ### En Cas de Blocage
 1. Relisez le TODO et la référence slide
 2. Regardez les fichiers fournis (marqués FOURNI) dans le même TP
-3. Testez avec curl pour voir l'erreur exacte
-4. Vérifiez les variables d'environnement (.env)
-5. Demandez de l'aide avec le message d'erreur complet
+3. **Consultez les exemples** dans `../exemples-presentation/` (code complet fonctionnel)
+4. Testez avec curl pour voir l'erreur exacte
+5. Vérifiez les variables d'environnement (.env)
+6. Demandez de l'aide avec le message d'erreur complet
 
 ---
 
@@ -339,6 +340,7 @@ curl -X GET http://localhost:3003/admin/dashboard \
 ## 📞 Support
 
 - **Email** : joseph.azar@univ-fcomte.fr
+- **Exemples** : Dossier `../exemples-presentation/` (5 fichiers .js complets)
 - **Slides** : Consultez les slides du cours R401
 
 ---

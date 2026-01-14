@@ -1,6 +1,7 @@
-# Ignorer tout sauf tp-labs
+# Ignorer tout sauf tp-labs et exemples-presentation
 /*
 !/tp-labs/
+!/exemples-presentation/
 !.gitignore
 !README.md
 

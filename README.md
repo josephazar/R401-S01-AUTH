@@ -38,6 +38,12 @@ Les TPs sont conçus pour être complétés en **75 minutes au total** et couvre
 jwt-webservices/
 ├── README.md                    # Ce fichier
 ├── .gitignore                   # Configuration Git
+├── exemples-presentation/       # Exemples de code complets (référence)
+│   ├── 1-basic-jwt.js           # Exemple : Génération/vérification JWT basique
+│   ├── 2-simple-api-jwt.js      # Exemple : API simple avec JWT
+│   ├── 3-passport-local.js      # Exemple : Passport Local Strategy
+│   ├── 4-passport-jwt.js        # Exemple : Passport JWT + RBAC
+│   └── 5-refresh-token.js       # Exemple : Pattern Refresh Token complet
 └── tp-labs/                     # Dossier des TPs
     ├── README.md                # Vue d'ensemble des 3 TPs
     ├── tp1-passport-local/      # TP1 : Passport Local Strategy (2 TODOs)
@@ -84,6 +90,25 @@ npm start      # Démarrer le serveur
 | **TP3** | Passport JWT + RBAC | 6 | Intégrer Passport JWT et contrôle d'accès par rôles |
 
 **Total** : 14 TODOs · **Durée estimée** : ~75 minutes
+
+---
+
+## 📖 Exemples de Référence
+
+Le dossier `exemples-presentation/` contient **5 exemples complets et fonctionnels** pour vous aider :
+
+| Fichier | Description | Utilité |
+|---------|-------------|---------|
+| `1-basic-jwt.js` | Génération et vérification JWT de base | Comprendre jwt.sign() et jwt.verify() |
+| `2-simple-api-jwt.js` | API simple avec JWT | Voir une implémentation minimale |
+| `3-passport-local.js` | Passport Local Strategy | Référence pour TP1 |
+| `4-passport-jwt.js` | Passport JWT + RBAC | Référence pour TP3 |
+| `5-refresh-token.js` | Pattern Refresh Token complet | Référence pour TP2 et TP3 |
+
+**💡 Comment utiliser les exemples** :
+- Consultez-les si vous êtes bloqué sur un TODO
+- Comparez votre code avec les exemples
+- Ne copiez pas directement : comprenez la logique !
 
 ---
 
