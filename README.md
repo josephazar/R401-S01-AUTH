@@ -325,7 +325,7 @@ Le code de ce dépôt est fourni à des fins pédagogiques. Les étudiants peuve
 
 ## 🎓 Crédits
 
-**Année Universitaire** : 2024-2025
+**Année Universitaire** : 2025-2026
 **Module** : R401 - Développement Web Avancé
 **Formation** : BUT Informatique - Semestre 4
 **Université** : Université de Franche-Comté
