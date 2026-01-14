@@ -428,7 +428,6 @@ function requireAuth(req, res, next) {
 ## 📚 Ressources
 
 - **Slides** : Section V - Passport.js
-- **Exemples** : `presentation-examples/3-passport-local.js`
 - **Documentation** : [Passport.js](https://www.passportjs.org/)
 - **Documentation** : [bcrypt](https://www.npmjs.com/package/bcryptjs)
 

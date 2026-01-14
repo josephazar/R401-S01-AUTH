@@ -103,7 +103,7 @@ Le serveur démarre sur http://localhost:3003
 - **Fichier** : `config/passport.js`
 - **Références** :
   - Slide "🔐 passport-jwt : Configuration"
-  - presentation-examples/4-passport-jwt.js
+  - Code fourni dans `models/User.js`
 - **À implémenter** :
   ```javascript
   const jwtOptions = {
@@ -133,7 +133,7 @@ npm start
 - **Fichier** : `middleware/roles.js`
 - **Références** :
   - Slide "🎯 Exemple Complet : API avec JWT"
-  - presentation-examples/4-passport-jwt.js
+  - Code similaire dans TP2 (middleware/auth.js)
 - **À implémenter** :
   ```javascript
   function requireRole(allowedRoles) {
@@ -190,7 +190,7 @@ curl -X POST http://localhost:3003/auth/login \
 - **Fichier** : `routes/auth.js`
 - **Références** :
   - Slide "🔐 passport-jwt : Utilisation"
-  - presentation-examples/4-passport-jwt.js
+  - Code fourni dans `routes/auth.js` (refresh/logout)
 - **À implémenter** :
   ```javascript
   router.get('/profile',
@@ -228,7 +228,7 @@ curl -X GET http://localhost:3003/auth/profile \
   - `GET /admin/users` - Liste des utilisateurs
   - `DELETE /admin/users/:id` - Supprimer un utilisateur
 - **Fichier** : `routes/admin.js`
-- **Références** : presentation-examples/4-passport-jwt.js
+- **Références** : Slides + Code fourni dans `middleware/roles.js`
 - **À implémenter** : Compléter les TODOs 8, 9, 10 dans le fichier
   - Chaque route doit utiliser `passport.authenticate('jwt')` + `requireAdmin`
   - La suppression doit empêcher l'auto-suppression
@@ -582,9 +582,8 @@ router.delete('/admin/users/:id',
 - Section VI : Bonnes Pratiques (Sécurité, Refresh Token)
 
 ### Code de Référence
-- `presentation-examples/3-passport-local.js` : Passport Local
-- `presentation-examples/4-passport-jwt.js` : Passport JWT + RBAC
-- `presentation-examples/5-refresh-token.js` : Refresh Token pattern
+- Examinez le code fourni (marqué FOURNI) dans `models/`, `routes/`
+- Consultez les implémentations des TPs précédents
 
 ### TPs Précédents
 - **TP1** : Configuration Passport Local, bcrypt
@@ -595,8 +594,7 @@ router.delete('/admin/users/:id',
 ## 📞 Support
 
 - **Email** : joseph.azar@univ-fcomte.fr
-- **Exemples** : `../presentation-examples/`
-- **Slides** : `../auth-jwt-webservices.html`
+- **Slides** : Consultez les slides du cours R401
 
 ---
 

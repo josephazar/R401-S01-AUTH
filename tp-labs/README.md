@@ -289,11 +289,11 @@ curl -X GET http://localhost:3003/admin/dashboard \
 2. **Consultez les slides** mentionnées dans les TODOs
 3. **Testez après chaque TODO** complété
 4. **Utilisez les routes de debug** pour comprendre l'état
-5. **Comparez avec les exemples** dans `presentation-examples/`
+5. **Examinez le code fourni** dans les autres fichiers du TP
 
 ### En Cas de Blocage
 1. Relisez le TODO et la référence slide
-2. Regardez l'exemple correspondant dans `presentation-examples/`
+2. Regardez les fichiers fournis (marqués FOURNI) dans le même TP
 3. Testez avec curl pour voir l'erreur exacte
 4. Vérifiez les variables d'environnement (.env)
 5. Demandez de l'aide avec le message d'erreur complet
@@ -339,8 +339,7 @@ curl -X GET http://localhost:3003/admin/dashboard \
 ## 📞 Support
 
 - **Email** : joseph.azar@univ-fcomte.fr
-- **Exemples de référence** : `../presentation-examples/`
-- **Slides** : `../auth-jwt-webservices.html`
+- **Slides** : Consultez les slides du cours R401
 
 ---
 

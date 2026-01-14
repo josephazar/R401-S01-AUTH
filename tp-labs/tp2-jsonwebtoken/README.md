@@ -753,7 +753,6 @@ try {
 ## 📚 Ressources
 
 - **Slides** : Section IV et VI
-- **Exemples** : `presentation-examples/2-simple-api-jwt.js`, `5-refresh-token.js`
 - **Documentation** : [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 - **JWT Debugger** : [jwt.io](https://jwt.io)
 
