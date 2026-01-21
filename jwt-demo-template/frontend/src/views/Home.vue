@@ -60,7 +60,7 @@ export default {
   },
   mounted() {
     // ============================================
-    // TODO 15: Charger les données utilisateur
+    // TODO 13: Charger les données utilisateur
     // ============================================
     // Au montage du composant:
     // 1. Récupérer l'utilisateur actuel avec authService.getCurrentUser()
@@ -71,7 +71,7 @@ export default {
   },
   methods: {
     // ============================================
-    // TODO 16: Implémenter fetchProfile
+    // TODO 14: Implémenter fetchProfile
     // ============================================
     // Récupérer le profil utilisateur depuis l'API protégée
     //
@@ -87,7 +87,7 @@ export default {
     },
 
     // ============================================
-    // TODO 17: Implémenter handleLogout
+    // TODO 15: Implémenter handleLogout
     // ============================================
     // Gérer la déconnexion
     //

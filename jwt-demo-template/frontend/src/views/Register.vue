@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     // ============================================
-    // TODO 13: Implémenter handleRegister
+    // TODO 11: Implémenter handleRegister
     // ============================================
     // Gérer la soumission du formulaire d'inscription
     //

@@ -15,12 +15,12 @@ const generateToken = (userId) => {
 };
 
 // ============================================
-// TODO 9: Route POST /register - Inscription
+// TODO 4: Route POST /register - Inscription
 // ============================================
 // Créer une route pour inscrire un nouvel utilisateur
 //
 // Étapes:
-// 1. Récupérer la db depuis req.app.locals.db
+// 1. Récupérer la db depuis req.app.locals.db (MongoDB fourni)
 // 2. Extraire email, password, name du req.body
 // 3. Valider que tous les champs sont présents
 // 4. Vérifier si l'email existe déjà avec findUserByEmail(db, email)
@@ -70,12 +70,12 @@ router.post('/register', async (req, res) => {
 });
 
 // ============================================
-// TODO 10: Route POST /login - Connexion
+// TODO 5: Route POST /login - Connexion
 // ============================================
 // Créer une route pour connecter un utilisateur existant
 //
 // Étapes:
-// 1. Récupérer la db depuis req.app.locals.db
+// 1. Récupérer la db depuis req.app.locals.db (MongoDB fourni)
 // 2. Extraire email et password du req.body
 // 3. Valider que les champs sont présents
 // 4. Trouver l'utilisateur avec findUserByEmail(db, email)
@@ -129,12 +129,12 @@ router.post('/login', async (req, res) => {
 });
 
 // ============================================
-// TODO 11: Route GET /profile - Profil protégé
+// TODO 6: Route GET /profile - Profil protégé
 // ============================================
 // Créer une route protégée qui retourne le profil de l'utilisateur connecté
 //
 // Indications:
-// - Utiliser le middleware authenticateToken
+// - Utiliser le middleware authenticateToken (TODO 3)
 // - L'utilisateur est disponible dans req.user (ajouté par le middleware)
 // - Retourner simplement req.user
 //

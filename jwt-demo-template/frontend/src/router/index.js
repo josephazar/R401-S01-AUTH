@@ -36,7 +36,7 @@ const router = createRouter({
 })
 
 // ============================================
-// TODO 12: Navigation Guard
+// TODO 10: Navigation Guard
 // ============================================
 // Implémenter un navigation guard pour protéger les routes
 //

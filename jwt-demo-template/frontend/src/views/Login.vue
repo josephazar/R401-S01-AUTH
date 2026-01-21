@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     // ============================================
-    // TODO 14: Implémenter handleLogin
+    // TODO 12: Implémenter handleLogin
     // ============================================
     // Gérer la soumission du formulaire de connexion
     //

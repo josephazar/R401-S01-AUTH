@@ -9,7 +9,7 @@ const api = axios.create({
 });
 
 // ============================================
-// TODO 9: Intercepteur de requête
+// TODO 7: Intercepteur de requête
 // ============================================
 // Configurer un intercepteur Axios pour ajouter automatiquement
 // le token JWT à chaque requête
@@ -33,7 +33,7 @@ const api = axios.create({
 // );
 
 // ============================================
-// TODO 10: Intercepteur de réponse
+// TODO 8: Intercepteur de réponse
 // ============================================
 // Configurer un intercepteur pour gérer automatiquement
 // les erreurs 401 (token expiré ou invalide)
@@ -54,7 +54,7 @@ const api = axios.create({
 // );
 
 // ============================================
-// TODO 11: Service d'authentification
+// TODO 9: Service d'authentification
 // ============================================
 // Créer un objet authService avec les méthodes suivantes:
 //

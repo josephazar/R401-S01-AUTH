@@ -2,17 +2,17 @@ const jwt = require('jsonwebtoken');
 const { findUserById, userWithoutPassword } = require('../models/User');
 
 // ============================================
-// TODO 8: Middleware authenticateToken
+// TODO 3: Middleware authenticateToken
 // ============================================
 // Créer un middleware pour vérifier le JWT dans le header Authorization
 //
 // Étapes:
 // 1. Extraire le token du header Authorization (format: "Bearer TOKEN")
 // 2. Vérifier si le token existe, sinon retourner 401
-// 3. Vérifier et décoder le token avec jwt.verify()
-// 4. Récupérer l'utilisateur depuis MongoDB avec findUserById(req.app.locals.db, userId)
-// 5. Exclure le password avec userWithoutPassword()
-// 6. Ajouter l'utilisateur à req.user
+// 3. Vérifier et décoder le token avec jwt.verify(token, process.env.JWT_SECRET)
+// 4. Récupérer l'utilisateur depuis MongoDB avec findUserById(req.app.locals.db, decoded.userId)
+// 5. Exclure le password avec userWithoutPassword(user)
+// 6. Ajouter l'utilisateur à req.user et appeler next()
 // 7. Gérer les erreurs (TokenExpiredError, JsonWebTokenError)
 //
 // Structure:

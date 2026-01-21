@@ -23,19 +23,19 @@ app.use(cors()); // À REMPLACER par app.use(cors(corsOptions))
 app.use(express.json());
 
 // ============================================
-// TODO 2: Connexion MongoDB
+// Connexion MongoDB (FOURNIE)
 // ============================================
-// Créer un client MongoDB et se connecter
-// Stocker la référence de la base de données dans app.locals.db pour la rendre accessible
-//
-// const client = new MongoClient(process.env.MONGODB_URI);
-//
-// client.connect()
-//   .then(() => {
-//     console.log('✅ MongoDB connecté');
-//     app.locals.db = client.db();
-//   })
-//   .catch(err => console.error('❌ Erreur MongoDB:', err));
+// Créer un client MongoDB et se connecter à la base de données
+// La référence 'db' est stockée dans app.locals pour être accessible dans les routes
+const client = new MongoClient(process.env.MONGODB_URI);
+
+client.connect()
+  .then(() => {
+    console.log('✅ MongoDB connecté');
+    // Stocker la référence de la base de données pour l'utiliser dans les routes
+    app.locals.db = client.db();
+  })
+  .catch(err => console.error('❌ Erreur MongoDB:', err));
 
 // Routes
 app.use('/api/auth', authRoutes);
