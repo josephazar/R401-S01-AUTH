@@ -79,13 +79,14 @@ cp .env.example .env
 ## 🏃 Lancer l'application
 
 \`\`\`bash
-
+# Terminal 1 - MongoDB
+Lancer MongoDB
 
 # Terminal 2 - Backend
-cd backend && npm run dev
+cd backend && npm install && npm run dev
 
 # Terminal 3 - Frontend
-cd frontend && npm run dev
+cd frontend && npm install && npm run dev
 \`\`\`
 
 Frontend: http://localhost:5173  

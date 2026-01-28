@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const passport = require('./config/passport');
 
@@ -23,13 +23,19 @@ app.use(express.json());
 app.use(passport.initialize());
 // ⚠️ PAS de passport.session() car on est en stateless JWT !
 
-// Stocker la référence db dans app.locals pour Passport
-app.locals.db = mongoose.connection;
+// Connexion MongoDB avec driver natif
+const client = new MongoClient(process.env.MONGODB_URI);
 
-// Connexion MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ MongoDB connecté'))
-  .catch(err => console.error('❌ Erreur MongoDB:', err));
+client.connect()
+  .then(() => {
+    console.log('✅ MongoDB connecté');
+    // Stocker la référence db dans app.locals pour les routes
+    app.locals.db = client.db();
+  })
+  .catch(err => {
+    console.error('❌ Erreur MongoDB:', err);
+    process.exit(1);
+  });
 
 // Routes
 app.use('/auth', authRoutes);
@@ -46,7 +52,7 @@ app.get('/', (req, res) => {
       'GET /auth/profile': 'Profil (protégé par JWT)',
       'GET /auth/users': 'Liste utilisateurs (debug)'
     },
-    database: 'MongoDB localhost:27017',
+    database: 'MongoDB Native Driver',
     authentication: 'JWT stateless + Google OAuth 2.0',
     cors: 'Configuré pour Vue.js'
   });
@@ -56,4 +62,11 @@ app.listen(PORT, () => {
   console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
   console.log(`📊 Base de données: ${process.env.MONGODB_URI}`);
   console.log(`🌐 Frontend autorisé: ${process.env.FRONTEND_URL}`);
+});
+
+// Fermer MongoDB à l'arrêt
+process.on('SIGINT', async () => {
+  await client.close();
+  console.log('MongoDB déconnecté');
+  process.exit(0);
 });
