@@ -4,12 +4,14 @@
 !/exemples-presentation/
 !/jwt-demo-template/
 !/oauth-jwt-demo-template/
+!/websockets-demo-template/
 !.gitignore
 !README.md
 
 # Cacher solutions complètes (référence enseignant uniquement)
 jwt-demo/
 oauth-jwt-demo/
+websockets-demo/
 
 # Node modules
 tp-labs/*/node_modules/
@@ -19,6 +21,9 @@ jwt-demo-template/frontend/dist/
 oauth-jwt-demo-template/backend/node_modules/
 oauth-jwt-demo-template/frontend/node_modules/
 oauth-jwt-demo-template/frontend/dist/
+websockets-demo-template/backend/node_modules/
+websockets-demo-template/frontend/node_modules/
+websockets-demo-template/frontend/dist/
 
 # EXCEPTION ÉDUCATIVE : Les fichiers .env sont normalement dans .gitignore
 # Ici, ils sont inclus uniquement pour faciliter les TPs et la démo (secrets factices)
