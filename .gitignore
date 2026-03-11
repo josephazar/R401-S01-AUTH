@@ -5,6 +5,7 @@
 !/jwt-demo-template/
 !/oauth-jwt-demo-template/
 !/websockets-demo-template/
+!/web_security/
 !.gitignore
 !README.md
 
